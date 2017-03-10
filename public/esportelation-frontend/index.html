@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Esportelation</title>
+        <!-- styles -->
+        <link href="assests/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assests/css/custom.css" rel="stylesheet">
+        <link href="assests/css/devices.css" rel="stylesheet">
+        <link href="assests/fonts/stylesheet.css" rel="stylesheet">    
+        <link rel="stylesheet" href="assests/css/owl.carousel.css">
+        <link rel="stylesheet" href="assests/css/owl.theme.default.css">
+        <link rel="stylesheet" href="assests/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assests/css/lightbox.css">
+        <link rel="stylesheet" href="assests/css/style.css">
+        <!-- scripts -->
+        <script src="assests/js/jquery-2.2.1.min.js"></script>
+        <script src="assests/js/bootstrap.min.js"></script>
+        <script src="assests/js/angular.min.js"></script>
+        <script src="assests/js/angular-route.min.js"></script>
+        <script src="./main.js"></script>
+        <script src="./services.js"></script>
+        <script src="./controllers.js"></script>
+        <script src="service/groupservice.js"></script>
+        <script src="assests/js/lightbox-plus-jquery.min.js"></script> 
+        <script src="assests/js/owl.carousel.js"></script>
+        <script src="assests/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+        
+    </head>
+    <body>
+        <div id="footer_image">
+            <div id="main_wrapper"> 
+                <div ng-include="'include/header.html'"></div>
+                <div id="main_in">
+                    <div ng-include="'include/menu.html'"></div>
+                    <div ng-view></div>
+                    <div ng-include="'include/footer.html'"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

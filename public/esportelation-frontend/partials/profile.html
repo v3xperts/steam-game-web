@@ -1,0 +1,260 @@
+<div class="profile-banner">
+    <div class="profile-bg"> 
+    <img src="/esportelation-frontend/assests/img/profile-bg.jpg" alt="profile">
+    </div>
+    <div class="profile-tab">
+        <div class="profile-user">
+            <h2>{{userdata.firstname}} {{userdata.lastname}}</h2>
+            <div class="player-location"><i class="fa fa-map-marker" aria-hidden="true"></i> India</div>
+        </div>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a style="background-color:transparent;" href="javascript:void(0)" data-target="#steam-sync" aria-controls="messages" role="tab" data-toggle="tab">Steam Sync</a></li>
+            <li role="presentation"><a style="background-color:transparent;" href="javascript:void(0)" data-target="#statistics" aria-controls="home" role="tab" data-toggle="tab">Statistics</a></li>
+            <li role="presentation"><a style="background-color:transparent;" href="" data-target="#setting" aria-controls="profile" role="tab" data-toggle="tab">Setting</a></li>
+            <li role="presentation"><a style="background-color:transparent;" href="javascript:void(0)" data-target="#invites" aria-controls="friends" role="tab" data-toggle="tab">Invites</a></li>
+            <li role="presentation"><a  style="background-color:transparent;" href="javascript:void(0)" data-target="#members" aria-controls="members" role="tab" data-toggle="tab">View Members</a></li>
+            <li role="presentation"><a  style="background-color:transparent;" href="javascript:void(0)" data-target="#groups" aria-controls="groups" role="tab" data-toggle="tab">Manage Group</a></li>
+        </ul>
+    </div>
+</div>
+<div class="top_shadow"></div>
+<div class="profile-information">
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane " id="statistics" ng-show="userdata.steamCheck">
+            <div class="static-content"> 
+                <h3>General</h3>
+                <form>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <label>0</label>Total matches
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <label>0 / 0</label>Victories / Losses
+                        </div>
+                    </div>
+                </form>
+                <div class="recent-matches">
+                    <h3>Recent Matches</h3>
+                    <table class="table-responsive">
+                        <tbody>
+                            <tr>
+                                <th>OUTCOME</th>
+                                <th>SERVER REGION</th>
+                                <th>GAME MODE</th>
+                                <th>DATE / TIME</th>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>California</td>
+                                <td>Sequenced</td>
+                                <td>12/01/2017</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>California</td>
+                                <td>Sequenced</td>
+                                <td>12/01/2017</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>California</td>
+                                <td>Sequenced</td>
+                                <td>12/01/2017</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>California</td>
+                                <td>Sequenced</td>
+                                <td>12/01/2017</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="setting" ng-show="userdata.steamCheck">
+            <div class="static-content profile-dam-css"> 
+                <h3>Profile</h3>
+                <p>Your profile is complete. To alter your Esportilation specific information, contact support.</p>
+                <form action="#" method="post" class="profile-form">
+                    <h2 class="main-username">Esportilation</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="text" name="name" placeholder="Addison Aiken" class="form-control" value="{{userdata.username}}" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="main-username">Personal</h2>
+                    <div class="row">
+                        <div class="col-md-6">                
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" name="name" placeholder="First Name" class="form-control" value="{{userdata.firstname}}">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" name="name" placeholder="Last Name" class="form-control" value="{{userdata.lastname}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Date Of Birth</label>
+                                <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                    <input class="form-control" size="16" type="text" value="" readonly>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="main-username">Address</h2>
+                    <div class="row">
+                        <div class="col-md-6">                
+                            <div class="form-group">
+                                <label>Country / Region</label>
+                                <select class="form-control">
+                                <option>Sweden</option>
+                                <option>India</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text" name="city" placeholder="Stockholm" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">                
+                            <div class="form-group">
+                                <label>Street</label>
+                                <input type="text" name="street" placeholder="Vastberga" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Zip Code</label>
+                                <input type="text" name="zip" placeholder="145525" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="main-username">Contact</h2>
+                    <div class="row">
+                        <div class="col-md-6">                
+                            <div class="form-group">
+                                <label>Mobile Number</label>
+                                <input type="text" name="city" placeholder="Mobile Number" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_submit find-games-btn"><button type="submit" class="btn btn-default read_more2">Update Profile</button></div>
+                </form>
+            </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane active" id="steam-sync">
+            <div class="static-content profile-dam-css">
+                <h3>Sync with Steam <div ng-if="userdata.steamCheck == true">(synced)</div></h3>
+                <p>You have already synced your Steam account, you can re-sync your account to update your avatar or find more recommended friends though Esportilation.</p>
+                <div class="form_submit find-games-btn">
+                    <div ng-if="userdata.steamCheck == true">
+                        <a href="/auth/steam" class="btn btn-default sync-btn" disabled>Sync with Steam</a>
+                    </div>
+                    <div ng-if="userdata.steamCheck == false">
+                        <a href="/auth/steam" class="btn btn-default sync-btn">Sync with Steam</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-init="groupList();"></div>
+        <div ng-init="groupMembers();"></div>
+        <div ng-init="groupInviteMembers();"></div>
+        <div ng-init="inviteMe();"></div>
+        <div role="tabpanel" class="tab-pane" id="invites" ng-show="userdata.steamCheck">
+            <div class="static-content">
+                <h3>Invitation Requests</h3>
+                <form style=" min-height: 50px;">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">Group Name </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"> Group Owner</div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">Accept</div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">Reject</div>
+                        </div>
+                    </div>
+                    <div class="row" ng-repeat="inviteMe in inviteMeList">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <a href="javascript:void(0)"> {{inviteMe.name}} </a>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <a href="javascript:void(0)"> {{inviteMe.user.firstname}} {{inviteMe.user.lastname}} </a>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <a href="javascript:void(0)" ng-click="inviteAccept(inviteMe._id)"> <img src="/esportelation-frontend/assests/img/accept.png" style="height: 30px; width: 30px;"></a>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <a href="javascript:void(0)" ng-click="inviteReject(inviteMe._id)"> <img src="/esportelation-frontend/assests/img/reject.png" style="height: 30px; width: 30px;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <h3 style="margin-top: 3%;margin-bottom: 3%;">Sent Invitation</h3>
+                <form style=" min-height: 50px;">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="groupInviteMember in groupInviteMemberList">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                <a href="#"> {{groupInviteMember.firstname}} {{groupInviteMember.lastname}} </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="members" ng-show="userdata.steamCheck">
+            <ul>
+                <li ng-repeat="groupMember in groupMemberList">{{groupMember.firstname}} {{groupMember.lastname}}</li>
+            </ul>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="groups" ng-show="userdata.steamCheck">
+            <div class="row" ng-hide="groupLength">
+                <a class="btn" href="#/add-group">Create Group</a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" ng-repeat="groupList in groupLists">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="#"> {{groupList.name}} </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="#">Invite Members</a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="javascript:void(0)" ng-click="groupDelete(groupList._id)">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('.form_date').datetimepicker({
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+    });
+</script>

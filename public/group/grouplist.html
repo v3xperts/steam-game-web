@@ -1,0 +1,49 @@
+<div id="page-wrapper">
+	<div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Group</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+	<div class="panel panel-default">
+        <div class="panel-heading">
+            <i class="fa fa-list fa-fw"></i> Group List
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-12" style="padding-bottom:10px;">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="exampleInputName2">Search</label>
+                            <input type="text" class="form-control" id="exampleInputName2" placeholder="Search" ng-model="searchText">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-12">
+                    <table class="table table-striped table-bordered">
+                    	<thead>
+                            <tr>
+                                <th><a href="javascript:void(0);" ng-click="vm.sortBy('name')">Group Name</a></th>
+                                <th>Owner Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd gradeX" ng-repeat="user in vm.allUsers| filter:searchText">
+                                <td>{{user.name}}</td>
+                                <td>{{user.user.firstname}} {{user.user.lastname}}</td>
+                                <td class="center">
+                                	<a href="#/group-edit/{{user._id}}" class="btn btn-info" ><i class="fa fa-pencil"></i> Edit</a>
+                                    <a href="#" class="btn btn-danger" confirmed-click="vm.deletePage(user._id)" ng-confirm-click="Are you sure you want to delete?"><i class="fa fa-trash-o"></i> Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+        	<a class="btn btn-primary" href="#/group-add"><i class="fa fa-plus"></i>Group Add</a>
+        </div>
+    </div>
+</div>

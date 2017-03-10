@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif !important;
+}
+
+* {
+    box-sizing: border-box;
+    -wekbkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+
+/****************************GRIDS******************************/
+
+.col_10w,
+.col_20w,
+.col_30w,
+.col_40w,
+.col_48w,
+.col_50w,
+.col_60w,
+.col_70w,
+.col_80w,
+.col_90w,
+.col_25w,
+.col_33w,
+.col_grid_3w {
+    box-sizing: border-box;
+    height: auto;
+}
+
+.col_10w {
+    width: 10%;
+}
+
+.col_20w {
+    width: 20%;
+}
+
+.col_30w {
+    width: 30%;
+}
+
+.col_40w {
+    width: 40%;
+}
+
+.col_48w {
+    width: 48%;
+}
+
+.col_50w {
+    width: 50%;
+}
+
+.col_60w {
+    width: 60%;
+}
+
+.col_70w {
+    width: 70%;
+}
+
+.col_80w {
+    width: 80%;
+}
+
+.col_90w {
+    width: 90%;
+}
+
+.col_25w {
+    width: 25%;
+}
+
+.col_33w {
+    width: 33.3%;
+}
+
+.col_grid_3w {
+    width: 32%;
+    margin: 0.66%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+
+.midContainer {
+    width: 70%;
+    height: auto;
+    margin: auto;
+}
+.midContainer2 {
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+
+.midContainer3 {
+    width: 30%;
+    height: auto;
+    margin: auto;
+}
+
+.full_width {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.floatl {
+    float: left;
+}
+
+.floatr {
+    float: right;
+}
+
+
+/*********List*********/
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/*********Headings*********/
+
+
+/********Form Fields******/
+
+input,
+button,
+textarea,
+select {
+    font-family: inherit; 
+}
+
+.btn {
+    border-radius: 4px;
+    padding: 6px 10px;
+    text-align: center;
+    text-shadow: none;
+    color: #000;
+    background: #fff;
+    border: solid 2px #cacaca;
+}
+
+.inputText {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+}

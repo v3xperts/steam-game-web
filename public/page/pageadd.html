@@ -1,0 +1,36 @@
+<div id="page-wrapper">
+	<div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Page Add</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+	<div class="panel panel-default">
+        <div class="panel-heading">
+            <i class="fa fa-list fa-fw"></i> Page Add
+        </div>
+        <div class="panel-body">
+            <div class="col-md-6 col-md-offset-3">
+                <form name="form" ng-submit="vm.add()" role="form">
+                    <div class="form-group" ng-class="{ 'has-error': form.title.$dirty && form.title.$error.required }">
+                        <label for="username">Title</label>
+                        <input type="text" name="title" id="title" class="form-control" ng-model="vm.page.title" required />
+                        <span ng-show="form.title.$dirty && form.title.$error.required" class="help-block">Title is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.description.$dirty && form.description.$error.required }">
+                        <label for="username">Description</label>
+                        <textarea ck-editor type="text" name="description" id="Text1" class="form-control" ng-model="vm.page.description" required> </textarea>
+                        <span ng-show="form.description.$dirty && form.description.$error.required" class="help-block">Description is required</span>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Save</button>
+                        <!-- <a href="#/login" class="btn btn-link">Cancel</a> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="panel-footer">
+        	<a class="btn btn-primary" href="#/page-list"><i class="fa fa-plus"></i> Page List</a>
+        </div>
+    </div>
+</div>

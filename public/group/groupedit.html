@@ -1,0 +1,45 @@
+<div id="page-wrapper">
+	<div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Group Edit</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+	<div class="panel panel-default">
+        <div class="panel-heading">
+            <i class="fa fa-list fa-fw"></i> Group Edit
+        </div>
+        <div class="panel-body">
+            <div class="col-md-6 col-md-offset-3">
+                <form name="form" ng-submit="vm.update()" role="form">
+                    <input type="hidden" ng-model="vm.page._id"/>
+                    <div class="form-group" ng-class="{ 'has-error': form.name.$dirty && form.name.$error.required }">
+                        <label for="username">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" ng-model="vm.page.name" required />
+                        <span ng-show="form.name.$dirty && form.name.$error.required" class="help-block">Group name is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.user.$dirty && form.user.$error.required }">
+                        <label for="username">Owner</label>
+                        {{vm.page.user.firstname}} {{vm.page.user.lastname}}
+                        <span ng-show="form.user.$dirty && form.user.$error.required" class="help-block">Group user is required</span>
+                    </div>
+                    <!-- <div class="form-group" ng-class="{ 'has-error': form.user.$dirty && form.user.$error.required }" >
+                        <label for="user">Member Name</label>
+                        <select  name="members[]" id="members" class="form-control" ng-model="vm.page.members"  required="vm.ownerRequired" multiple>
+                            <option value=''>Select User</option>
+                            <option ng-repeat="owner in vm.page.members" ng-value="owner" ng-init="vm.getOwner(owner)">{{vm.ownerData.firstname}}{{vm.ownerData.lastname}}</option>
+                        </select>
+                        <span ng-show="form.owner.$dirty && form.owner.$error.required" class="help-block">Member Name is required</span>
+                    </div> -->
+                    <div class="form-actions">
+                        <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Update</button>
+                        <!-- <a href="#/login" class="btn btn-link">Cancel</a> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="panel-footer">
+        	<a class="btn btn-primary" href="#/group-list"><i class="fa fa-list"></i> Group List</a>
+        </div>
+    </div>
+</div>

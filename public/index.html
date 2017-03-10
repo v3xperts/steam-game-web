@@ -1,0 +1,47 @@
+<html ng-app="app">
+<head>
+	<title>Esportelation Admin</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/sb-admin-2.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+	<script type="text/javascript" src="javascripts/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
+	
+	<script type="text/javascript" src="javascripts/morris.min.js"></script>
+	<script type="text/javascript" src="javascripts/raphael.min.js"></script>
+	<script type="text/javascript" src="javascripts/validator.js"></script>
+	<script type="text/javascript" src="javascripts/angular.js"></script>
+	<script type="text/javascript" src="javascripts/angular-route.js"></script>
+	<script type="text/javascript" src="javascripts/angular-cookies.js"></script>
+	<script type="text/javascript" src="javascripts/ng-file-upload/dist/ng-file-upload.min.js"></script>
+	<script type="text/javascript" src="javascripts/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+	<script type="text/javascript" src="javascripts/app.js"></script>
+	<script type="text/javascript" src="services/authentication.service.js"></script>
+	<script type="text/javascript" src="services/group.service.js"></script>
+	<script type="text/javascript" src="services/user.service.js"></script>
+	<script type="text/javascript" src="services/page.service.js"></script>
+	<script type="text/javascript" src="services/owner.service.js"></script>
+	<script type="text/javascript" src="services/flash.service.js"></script>
+	<script type="text/javascript" src="login/loginController.js"></script>
+	<script type="text/javascript" src="login/registerController.js"></script>
+	<script type="text/javascript" src="home/home.controller.js"></script>
+	<script type="text/javascript" src="dashboard/dashboardController.js"></script>
+	<script type="text/javascript" src="owner/OwnerController.js"></script>
+	<script type="text/javascript" src="page/PageController.js"></script>
+	<script type="text/javascript" src="group/GroupController.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<div ng-show="globals.currentUser" ng-include="'menu/menu.html'"></div>
+		<div class="row">
+  			<div class="col-sm-8 col-sm-offset-3">
+				<div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+			</div>
+		</div>
+		<div ng-view></div>
+	</div>
+</body>
+</html>

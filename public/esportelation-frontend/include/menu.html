@@ -1,0 +1,46 @@
+<div id="menu_wrapper" ng-controller="loginController">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div id="menu_left"></div>
+    <ul id="menu" class="navbar-collapse collapse">
+        <li class="active"><a href="#/">Home</a></li>
+        <li><a href="search-game.html">Search Game</a></li>
+        <li><a href="quick-match.html">Quick Match</a></li>
+        <li><a href="challenge.html">Challenges</a></li>
+        <li class="dropdown"><a href="wallet.html">Wallet<i class="fa fa-caret-down hide-on-desktop"></i></a>
+            <ul style="visibility: hidden;">
+                <li><a href="javascript:void(0);">Deposit</a></li>
+                <li><a href="javascript:void(0);">Withdraw</a></li>
+                <li><a href="javascript:void(0);">Emeralds</a></li>
+                <li><a href="javascript:void(0);">History</a></li>
+            </ul>
+        </li>
+        <li><a href="#/about">About Us</a></li>          
+        <li><a href="#/faq">Support &amp; Faq</a></li>
+        <li><a href="#/contact">Contact Us</a></li>
+        <li ng-hide="userdata"><a href="#/login">Login</a></li>
+        <li ng-hide="userdata"><a href="#/register">Signup</a></li>
+    </ul>
+    <div class="dropdown user-button" ng-show="userdata">
+        <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="user-image float-left"><img src="/esportelation-frontend/assests/img/user-img.png" alt="image"></div>
+            <div class="user-info-container">
+            <div class="user-name">{{userdata.firstname}} {{userdata.lastname}}</div>
+            <div class="user-currency">
+                <span><i class="fa fa-usd" aria-hidden="true"></i>0</span>
+                <span><i class="fa fa-eur" aria-hidden="true"></i>0</span>
+            </div>
+            </div>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dLabel">
+            <li><a href="profile.html"><i class="fa fa-user"></i>Profile</a></li>
+            <li><a ng-click='logout()'><i class="fa fa-sign-out"></i>Log out</a></li>
+        </ul>
+    </div>
+    <div id="menu_right"></div>
+    <div class="clear"></div>
+</div>  

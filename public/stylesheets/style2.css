@@ -1,0 +1,49 @@
+
+/****************************************Listing Page***********************************************/
+.contentInternal
+{
+    width: 100%;
+    float: left;
+    height: auto;
+    min-height: 650px;
+}
+a.cardStyle
+{ 
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 0.5em 0;
+  text-decoration: none;
+}
+.cardStyle img
+{ 
+  border:solid 1px #cfcfcf;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  border-radius: 5px;
+}
+.cardStyle p
+{ 
+  
+  padding: 0.5em 0;
+  font-size: 1.4em;
+  text-transform: uppercase; 
+  color: #9c9c9c;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 400;
+}
+
+.modalTitle
+{
+    padding: 2em 0;
+}
+.modalTitle img
+{
+    width: 30%;
+    float: left;
+}
+.modalTitle span
+{
+    padding: 0.2em 0.5em;
+    float: left;
+    display: inline-block;
+}

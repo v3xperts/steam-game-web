@@ -1,0 +1,59 @@
+<div id="full_page_wrapper"> 
+    <div class="header">
+        <h2><span>Steam Game //</span> Register</h2>
+        <p>Please complete the form below to create your free Esportilation account.</p>
+    </div>       
+    <div id="post_wrapper"><!-- Left wrapper Start -->
+        <div class="wrapper-content">          
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="left">
+                        <div class="content-padding">
+                            <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+                            <div class="the-form">
+                                <form class="form-horizontal" id='demo-form' ng-submit="register()">
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-3 control-label">First Name<sup>*</sup></label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="inputEmail7" placeholder="First Name" name="firstname" ng-model="registerForm.firstname" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-3 control-label">Last Name<sup>*</sup></label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="inputEmail7" placeholder="Last Name" name="lastname" ng-model="registerForm.lastname" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-3 control-label">Username<sup>*</sup></label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="inputEmail3" placeholder="Username" name="username" ng-model="registerForm.username" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-3 control-label">Email ID<sup>*</sup></label>
+                                        <div class="col-sm-9">
+                                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email ID" name="email" ng-model="registerForm.email" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword3" class="col-sm-3 control-label">Password<sup>*</sup></label>
+                                        <div class="col-sm-9">
+                                            <input type="password" class="form-control" id="inputPassword5" placeholder="Password" name="password" ng-model="registerForm.password" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group margin-bottom-zero">
+                                        <div class="col-sm-offset-3 col-sm-9">
+                                            <button type="submit" class="btn btn-default read_more2" ng-disabled="disabled">Register</button>
+                                            <a href="#/"><button type="button" class="btn btn-default read_more2 cancel-btn">Cancel</button></a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+            </div>        
+        </div>
+    </div><!-- Left wrapper end -->       
+</div>
